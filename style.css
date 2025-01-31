@@ -1,0 +1,302 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222222;
+    color: #817c7c;
+    line-height: 1.6;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Cabeçalho */
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #222222;
+}
+
+header .logo {
+    width: 160px;
+    height: auto;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+header .logo:hover {
+    transform: rotate(40deg); /* Gira o logo um pouco quando o usuário passar o mouse */
+  
+}
+/* Menu */
+.menu {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 1.1em;
+    margin: 0 8px;
+    padding: 8px 16px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease,transform 0.3s ease;;
+}
+
+.menu a:hover {
+    background-color:  #444444;
+    border-color: #888888;
+    transform: rotate(40deg);
+}
+
+/* Seção de chamada (CTA) */
+#cta {
+    
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+#cta h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    animation: textAnimation 3s ease-in-out infinite;
+}
+@keyframes textAnimation {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: #89b5ee;
+    }
+    100% {
+        color: #fff;
+    }
+}
+#cta p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+/* Botões */
+.button {
+    text-decoration: none;
+    color: white;
+    background-color: #70a1e0;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #5b8dcc;
+}
+
+/* Container centralizado */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    
+}
+
+.container h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 0.8em;
+    background-color: #222222;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        margin: 10px 0;
+    }
+
+    header .logo {
+        width: 120px;
+    }
+
+    #cta {
+        padding: 30px 15px;
+    }
+}
+/* Estilos gerais para a seção de eventos */
+#events {
+    padding: 60px 20px;
+    background-color: #333333;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+#events h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+/* Cards de evento */
+.event-card {
+    background-color: #444444;
+    border-radius: 8px;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.event-card h3 {
+    font-size: 1.5em;
+    color: #70a1e0;
+    margin-bottom: 10px;
+}
+
+.event-date,
+.event-location {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.event-description {
+    font-size: 1em;
+    color: #d1d1d1;
+    margin-top: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .event-card {
+        width: 90%;
+        padding: 15px;
+    }
+}
+/* Estilo da seção de Últimos Eventos */
+.ultimos-eventos {
+    padding: 30px;
+    background-color: #222222;
+    text-align: center;
+}
+
+.ultimos-eventos h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #222222;
+}
+
+/* Estilo para cada evento */
+.evento {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    background-color: rgb(77, 74, 74);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    
+    width: 90%; /* Definir uma largura específica para o contêiner */
+    max-width: 1000px; /* Definir um limite para a largura máxima */
+    margin-left: auto; /* Centraliza o evento */
+    margin-right: auto; /* Centraliza o evento */
+}
+
+.evento-imagem {
+    max-width: 300px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.evento-descricao {
+    max-width: 600px;
+    text-align: left;
+}
+
+.evento-descricao h3 {
+    font-size: 1.8em;
+    color: #70a1e0;
+}
+
+.evento-descricao p {
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+
+/* Estilo da seção de Ministérios */
+.ministerios {
+    padding: 30px;
+    background-color: #222222;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ministerio-card {
+    background-color: #444444;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.ministerio-card:hover {
+    transform: translateY(-40px);
+    box-shadow: 0 10px 20px rgba(128, 176, 231, 0.15);
+}
+
+.ministerio-card h3 {
+    font-size: 1.5em;
+    color: #70a1e0;
+    margin-bottom: 10px;
+}
+
+.ministerio-card p {
+    font-size: 1.1em;
+    color: #d1d1d1;
+}
+
+/* Responsividade para Ministérios */
+@media (max-width: 768px) {
+    .ministerio-card {
+        width: 100%;
+    }
+}
+
